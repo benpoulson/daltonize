@@ -17,11 +17,11 @@ npm install daltonize
 ## Usage
 To use Daltonize, simply call the `daltonize` method and provide an array of three components (R, G, and B) representing the original color. The method will return a safer RGB value for use:
 
-```typescript
-const daltonize = require('daltonize');
+```javascript
+const { daltonize } = require("daltonize");
 
 const originalColor = [255, 0, 0]; // Red color
-const colorblindSafeColor = daltonize.convert(originalColor);
+const colorblindSafeColor = daltonize(originalColor, "protanope");
 
 console.log(`Original Color: ${originalColor}`);
 console.log(`Colorblind-Safe Color: ${colorblindSafeColor}`);
