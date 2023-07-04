@@ -1,0 +1,7 @@
+{
+  "src/index.ts": {
+    "file": "main.cjs.js",
+    "isEntry": true,
+    "src": "src/index.ts"
+  }
+}
