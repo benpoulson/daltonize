@@ -21,10 +21,20 @@ To use Daltonize, simply call the `daltonize` method and provide an array of thr
 const { daltonize } = require("daltonize");
 
 const originalColor = [255, 0, 0]; // Red color
-const colorblindSafeColor = daltonize(originalColor, "protanope");
+const colorblindSafeColorProtan = daltonize(originalColor, "protanope");
+const colorblindSafeColorDeuteran = daltonize(originalColor, "deuteranope");
+const colorblindSafeColorTritan = daltonize(originalColor, "tritanope");
 
 console.log(`Original Color: ${originalColor}`);
-console.log(`Colorblind-Safe Color: ${colorblindSafeColor}`);
+console.log(`Protan-Safe Color: ${colorblindSafeColorProtan}`);
+console.log(`Deuteran-Safe Color: ${colorblindSafeColorDeuteran}`);
+console.log(`Tritan-Safe Color: ${colorblindSafeColorTritan}`);
+
+// Output:
+// Original Color: 255,0,0
+// Protan-Safe Color: 255,129,157
+// Deuteran-Safe Color: 255,51,131
+// Tritan-Safe Color: 255,0,255
 ```
 
 ## Contributing
